@@ -7,6 +7,7 @@
 //
 
 #import "FISGithubAPIClient.h"
+#import "FISConstants.h"
 #import <AFNetworking.h>
 
 @implementation FISGithubAPIClient

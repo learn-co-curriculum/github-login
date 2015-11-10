@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		56082481EB074ABFA6B17BEE /* libPods-github-repo-starringTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C162AE1AB9ED4995B090E11B /* libPods-github-repo-starringTests.a */; };
-		6F474C2E1ACC7AA500E029D2 /* FISGithubLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F474C2D1ACC7AA500E029D2 /* FISGithubLoginViewController.m */; };
-		6F474C311ACC956900E029D2 /* NSURL+QueryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F474C301ACC956900E029D2 /* NSURL+QueryParser.m */; };
 		8F22EA0779774795A9381EE9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9386AE5B2144E1AAB0E871 /* libPods.a */; };
 		D82DB6C01921613300FA0E08 /* not_starred.json in Resources */ = {isa = PBXBuildFile; fileRef = D82DB6BF1921613300FA0E08 /* not_starred.json */; };
 		D82DB6C11921613300FA0E08 /* not_starred.json in Resources */ = {isa = PBXBuildFile; fileRef = D82DB6BF1921613300FA0E08 /* not_starred.json */; };
@@ -19,23 +17,22 @@
 		D871ACA919210D190029CCC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D871ACA719210D190029CCC8 /* InfoPlist.strings */; };
 		D871ACAB19210D190029CCC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACAA19210D190029CCC8 /* main.m */; };
 		D871ACAF19210D190029CCC8 /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACAE19210D190029CCC8 /* FISAppDelegate.m */; };
-		D871ACB519210D190029CCC8 /* FISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACB419210D190029CCC8 /* FISViewController.m */; };
 		D871ACB719210D190029CCC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D871ACB619210D190029CCC8 /* Images.xcassets */; };
 		D871ACBE19210D190029CCC8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D871ACBD19210D190029CCC8 /* XCTest.framework */; };
 		D871ACBF19210D190029CCC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D871AC9E19210D190029CCC8 /* Foundation.framework */; };
 		D871ACC019210D190029CCC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D871ACA219210D190029CCC8 /* UIKit.framework */; };
 		D871ACC819210D190029CCC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D871ACC619210D190029CCC8 /* InfoPlist.strings */; };
 		D871ACDB19210D970029CCC8 /* FISReposTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACD419210D970029CCC8 /* FISReposTableViewController.m */; };
+		D871ACDC19210D970029CCC8 /* FISConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACD619210D970029CCC8 /* FISConstants.m */; };
 		D871ACDD19210D970029CCC8 /* FISGithubAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACD819210D970029CCC8 /* FISGithubAPIClient.m */; };
 		D871ACDE19210D970029CCC8 /* FISReposDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACDA19210D970029CCC8 /* FISReposDataStore.m */; };
 		D871ACE119210DA00029CCC8 /* FISGithubRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACE019210DA00029CCC8 /* FISGithubRepository.m */; };
 		D871ACE319210DAF0029CCC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D871ACE219210DAF0029CCC8 /* Main.storyboard */; };
-		D871ACE819210DE60029CCC8 /* FISGithubRepositorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACE419210DE60029CCC8 /* FISGithubRepositorySpec.m */; };
-		D871ACE919210DE60029CCC8 /* FISReposDataStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACE519210DE60029CCC8 /* FISReposDataStoreSpec.m */; };
-		D871ACEA19210DE60029CCC8 /* FISGithubAPIClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACE619210DE60029CCC8 /* FISGithubAPIClientSpec.m */; };
-		D871ACEB19210DE60029CCC8 /* FISReposTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D871ACE719210DE60029CCC8 /* FISReposTableViewControllerSpec.m */; };
 		D871ACED19210DF40029CCC8 /* repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = D871ACEC19210DF40029CCC8 /* repositories.json */; };
 		D871ACEE19210DF40029CCC8 /* repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = D871ACEC19210DF40029CCC8 /* repositories.json */; };
+		E21A7DA91BF29FB900CDFB8E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E21A7DA81BF29FB900CDFB8E /* Launch Screen.storyboard */; };
+		E21A7DB01BF2A4FC00CDFB8E /* FISGithubLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21A7DAB1BF2A4FC00CDFB8E /* FISGithubLoginViewController.m */; };
+		E21A7DB21BF2A4FC00CDFB8E /* NSURL+QueryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E21A7DAF1BF2A4FC00CDFB8E /* NSURL+QueryParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +47,10 @@
 
 /* Begin PBXFileReference section */
 		1D9386AE5B2144E1AAB0E871 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F474C2C1ACC7AA500E029D2 /* FISGithubLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISGithubLoginViewController.h; sourceTree = "<group>"; };
-		6F474C2D1ACC7AA500E029D2 /* FISGithubLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubLoginViewController.m; sourceTree = "<group>"; };
-		6F474C2F1ACC956900E029D2 /* NSURL+QueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryParser.h"; sourceTree = "<group>"; };
-		6F474C301ACC956900E029D2 /* NSURL+QueryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryParser.m"; sourceTree = "<group>"; };
-		A11796A728B07AA53ED66E13 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		BBC86D9F6638021FBC5B6621 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2407562632AA5190454B6473 /* Pods-github-repo-starringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-repo-starringTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-github-repo-starringTests/Pods-github-repo-starringTests.debug.xcconfig"; sourceTree = "<group>"; };
+		318EBDEBC872E044F49EB44E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4B9742F5BB262B53395C3022 /* Pods-github-repo-starringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-repo-starringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-github-repo-starringTests/Pods-github-repo-starringTests.release.xcconfig"; sourceTree = "<group>"; };
+		81BB06ACDCA4B786B5487A90 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C162AE1AB9ED4995B090E11B /* libPods-github-repo-starringTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-github-repo-starringTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82DB6BF1921613300FA0E08 /* not_starred.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = not_starred.json; sourceTree = "<group>"; };
 		D871AC9B19210D190029CCC8 /* github-repo-starring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-repo-starring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,8 +63,6 @@
 		D871ACAC19210D190029CCC8 /* github-repo-starring-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "github-repo-starring-Prefix.pch"; sourceTree = "<group>"; };
 		D871ACAD19210D190029CCC8 /* FISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
 		D871ACAE19210D190029CCC8 /* FISAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FISAppDelegate.m; sourceTree = "<group>"; };
-		D871ACB319210D190029CCC8 /* FISViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FISViewController.h; sourceTree = "<group>"; };
-		D871ACB419210D190029CCC8 /* FISViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FISViewController.m; sourceTree = "<group>"; };
 		D871ACB619210D190029CCC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D871ACBC19210D190029CCC8 /* github-repo-starringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "github-repo-starringTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D871ACBD19210D190029CCC8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -77,6 +70,8 @@
 		D871ACC719210D190029CCC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D871ACD319210D970029CCC8 /* FISReposTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISReposTableViewController.h; sourceTree = "<group>"; };
 		D871ACD419210D970029CCC8 /* FISReposTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISReposTableViewController.m; sourceTree = "<group>"; };
+		D871ACD519210D970029CCC8 /* FISConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISConstants.h; sourceTree = "<group>"; };
+		D871ACD619210D970029CCC8 /* FISConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISConstants.m; sourceTree = "<group>"; };
 		D871ACD719210D970029CCC8 /* FISGithubAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISGithubAPIClient.h; sourceTree = "<group>"; };
 		D871ACD819210D970029CCC8 /* FISGithubAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubAPIClient.m; sourceTree = "<group>"; };
 		D871ACD919210D970029CCC8 /* FISReposDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISReposDataStore.h; sourceTree = "<group>"; };
@@ -84,13 +79,12 @@
 		D871ACDF19210DA00029CCC8 /* FISGithubRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISGithubRepository.h; sourceTree = "<group>"; };
 		D871ACE019210DA00029CCC8 /* FISGithubRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubRepository.m; sourceTree = "<group>"; };
 		D871ACE219210DAF0029CCC8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		D871ACE419210DE60029CCC8 /* FISGithubRepositorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubRepositorySpec.m; sourceTree = "<group>"; };
-		D871ACE519210DE60029CCC8 /* FISReposDataStoreSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISReposDataStoreSpec.m; sourceTree = "<group>"; };
-		D871ACE619210DE60029CCC8 /* FISGithubAPIClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubAPIClientSpec.m; sourceTree = "<group>"; };
-		D871ACE719210DE60029CCC8 /* FISReposTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISReposTableViewControllerSpec.m; sourceTree = "<group>"; };
 		D871ACEC19210DF40029CCC8 /* repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = repositories.json; sourceTree = "<group>"; };
-		E72BD9611679417AF97834C9 /* Pods-github-repo-starringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-repo-starringTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-github-repo-starringTests/Pods-github-repo-starringTests.debug.xcconfig"; sourceTree = "<group>"; };
-		ECBD65A70C623FD2DEE7524A /* Pods-github-repo-starringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-repo-starringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-github-repo-starringTests/Pods-github-repo-starringTests.release.xcconfig"; sourceTree = "<group>"; };
+		E21A7DA81BF29FB900CDFB8E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E21A7DAA1BF2A4FC00CDFB8E /* FISGithubLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISGithubLoginViewController.h; sourceTree = "<group>"; };
+		E21A7DAB1BF2A4FC00CDFB8E /* FISGithubLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISGithubLoginViewController.m; sourceTree = "<group>"; };
+		E21A7DAE1BF2A4FC00CDFB8E /* NSURL+QueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryParser.h"; sourceTree = "<group>"; };
+		E21A7DAF1BF2A4FC00CDFB8E /* NSURL+QueryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryParser.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,13 +113,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27B1112BAFD467B167625CC3 /* Pods */ = {
+		6E451C549D9EF3A7AE6AF063 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BBC86D9F6638021FBC5B6621 /* Pods.debug.xcconfig */,
-				A11796A728B07AA53ED66E13 /* Pods.release.xcconfig */,
-				E72BD9611679417AF97834C9 /* Pods-github-repo-starringTests.debug.xcconfig */,
-				ECBD65A70C623FD2DEE7524A /* Pods-github-repo-starringTests.release.xcconfig */,
+				318EBDEBC872E044F49EB44E /* Pods.debug.xcconfig */,
+				81BB06ACDCA4B786B5487A90 /* Pods.release.xcconfig */,
+				2407562632AA5190454B6473 /* Pods-github-repo-starringTests.debug.xcconfig */,
+				4B9742F5BB262B53395C3022 /* Pods-github-repo-starringTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -137,7 +131,7 @@
 				D871ACC319210D190029CCC8 /* github-repo-starringTests */,
 				D871AC9D19210D190029CCC8 /* Frameworks */,
 				D871AC9C19210D190029CCC8 /* Products */,
-				27B1112BAFD467B167625CC3 /* Pods */,
+				6E451C549D9EF3A7AE6AF063 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,23 +160,23 @@
 		D871ACA419210D190029CCC8 /* github-repo-starring */ = {
 			isa = PBXGroup;
 			children = (
-				6F474C2F1ACC956900E029D2 /* NSURL+QueryParser.h */,
-				6F474C301ACC956900E029D2 /* NSURL+QueryParser.m */,
-				6F474C2C1ACC7AA500E029D2 /* FISGithubLoginViewController.h */,
-				6F474C2D1ACC7AA500E029D2 /* FISGithubLoginViewController.m */,
+				E21A7DAA1BF2A4FC00CDFB8E /* FISGithubLoginViewController.h */,
+				E21A7DAB1BF2A4FC00CDFB8E /* FISGithubLoginViewController.m */,
+				E21A7DAE1BF2A4FC00CDFB8E /* NSURL+QueryParser.h */,
+				E21A7DAF1BF2A4FC00CDFB8E /* NSURL+QueryParser.m */,
+				D871ACAD19210D190029CCC8 /* FISAppDelegate.h */,
+				D871ACAE19210D190029CCC8 /* FISAppDelegate.m */,
+				D871ACD519210D970029CCC8 /* FISConstants.h */,
+				D871ACD619210D970029CCC8 /* FISConstants.m */,
+				D871ACDF19210DA00029CCC8 /* FISGithubRepository.h */,
+				D871ACE019210DA00029CCC8 /* FISGithubRepository.m */,
 				D871ACD319210D970029CCC8 /* FISReposTableViewController.h */,
 				D871ACD419210D970029CCC8 /* FISReposTableViewController.m */,
 				D871ACD719210D970029CCC8 /* FISGithubAPIClient.h */,
 				D871ACD819210D970029CCC8 /* FISGithubAPIClient.m */,
 				D871ACD919210D970029CCC8 /* FISReposDataStore.h */,
 				D871ACDA19210D970029CCC8 /* FISReposDataStore.m */,
-				D871ACAD19210D190029CCC8 /* FISAppDelegate.h */,
-				D871ACAE19210D190029CCC8 /* FISAppDelegate.m */,
 				D871ACE219210DAF0029CCC8 /* Main.storyboard */,
-				D871ACB319210D190029CCC8 /* FISViewController.h */,
-				D871ACB419210D190029CCC8 /* FISViewController.m */,
-				D871ACDF19210DA00029CCC8 /* FISGithubRepository.h */,
-				D871ACE019210DA00029CCC8 /* FISGithubRepository.m */,
 				D871ACB619210D190029CCC8 /* Images.xcassets */,
 				D871ACA519210D190029CCC8 /* Supporting Files */,
 			);
@@ -196,6 +190,7 @@
 				D871ACA719210D190029CCC8 /* InfoPlist.strings */,
 				D871ACAA19210D190029CCC8 /* main.m */,
 				D871ACAC19210D190029CCC8 /* github-repo-starring-Prefix.pch */,
+				E21A7DA81BF29FB900CDFB8E /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -203,10 +198,6 @@
 		D871ACC319210D190029CCC8 /* github-repo-starringTests */ = {
 			isa = PBXGroup;
 			children = (
-				D871ACE419210DE60029CCC8 /* FISGithubRepositorySpec.m */,
-				D871ACE519210DE60029CCC8 /* FISReposDataStoreSpec.m */,
-				D871ACE619210DE60029CCC8 /* FISGithubAPIClientSpec.m */,
-				D871ACE719210DE60029CCC8 /* FISReposTableViewControllerSpec.m */,
 				D871ACC419210D190029CCC8 /* Supporting Files */,
 			);
 			path = "github-repo-starringTests";
@@ -235,6 +226,7 @@
 				D871AC9819210D190029CCC8 /* Frameworks */,
 				D871AC9919210D190029CCC8 /* Resources */,
 				C705BE10FF2B45CA8A5D78B3 /* Copy Pods Resources */,
+				44713B537885F1BB6B1E725E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +246,7 @@
 				D871ACB919210D190029CCC8 /* Frameworks */,
 				D871ACBA19210D190029CCC8 /* Resources */,
 				6FA9469267E34A06AD2E5187 /* Copy Pods Resources */,
+				D639188A160580F8006A95CD /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,7 +265,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FIS;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Joe Burgess";
 				TargetAttributes = {
 					D871ACBB19210D190029CCC8 = {
@@ -304,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21A7DA91BF29FB900CDFB8E /* Launch Screen.storyboard in Resources */,
 				D871ACB719210D190029CCC8 /* Images.xcassets in Resources */,
 				D871ACED19210DF40029CCC8 /* repositories.json in Resources */,
 				D82DB6C01921613300FA0E08 /* not_starred.json in Resources */,
@@ -325,6 +319,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		44713B537885F1BB6B1E725E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6FA9469267E34A06AD2E5187 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +379,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D639188A160580F8006A95CD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-github-repo-starringTests/Pods-github-repo-starringTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FA2D7ABCA9F44F2CB1540BAA /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,14 +416,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F474C311ACC956900E029D2 /* NSURL+QueryParser.m in Sources */,
-				D871ACB519210D190029CCC8 /* FISViewController.m in Sources */,
+				D871ACDC19210D970029CCC8 /* FISConstants.m in Sources */,
 				D871ACDE19210D970029CCC8 /* FISReposDataStore.m in Sources */,
 				D871ACAB19210D190029CCC8 /* main.m in Sources */,
+				E21A7DB21BF2A4FC00CDFB8E /* NSURL+QueryParser.m in Sources */,
 				D871ACDD19210D970029CCC8 /* FISGithubAPIClient.m in Sources */,
 				D871ACE119210DA00029CCC8 /* FISGithubRepository.m in Sources */,
 				D871ACDB19210D970029CCC8 /* FISReposTableViewController.m in Sources */,
-				6F474C2E1ACC7AA500E029D2 /* FISGithubLoginViewController.m in Sources */,
+				E21A7DB01BF2A4FC00CDFB8E /* FISGithubLoginViewController.m in Sources */,
 				D871ACAF19210D190029CCC8 /* FISAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,10 +432,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D871ACE819210DE60029CCC8 /* FISGithubRepositorySpec.m in Sources */,
-				D871ACEA19210DE60029CCC8 /* FISGithubAPIClientSpec.m in Sources */,
-				D871ACE919210DE60029CCC8 /* FISReposDataStoreSpec.m in Sources */,
-				D871ACEB19210DE60029CCC8 /* FISReposTableViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +483,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -477,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -509,7 +530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -517,13 +538,15 @@
 		};
 		D871ACCE19210D190029CCC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBC86D9F6638021FBC5B6621 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 318EBDEBC872E044F49EB44E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "github-repo-starring/github-repo-starring-Prefix.pch";
 				INFOPLIST_FILE = "github-repo-starring/github-repo-starring-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -531,13 +554,15 @@
 		};
 		D871ACCF19210D190029CCC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A11796A728B07AA53ED66E13 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 81BB06ACDCA4B786B5487A90 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "github-repo-starring/github-repo-starring-Prefix.pch";
 				INFOPLIST_FILE = "github-repo-starring/github-repo-starring-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -545,7 +570,7 @@
 		};
 		D871ACD119210D190029CCC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E72BD9611679417AF97834C9 /* Pods-github-repo-starringTests.debug.xcconfig */;
+			baseConfigurationReference = 2407562632AA5190454B6473 /* Pods-github-repo-starringTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/github-repo-starring.app/github-repo-starring";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -560,6 +585,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "github-repo-starringTests/github-repo-starringTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -568,7 +594,7 @@
 		};
 		D871ACD219210D190029CCC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECBD65A70C623FD2DEE7524A /* Pods-github-repo-starringTests.release.xcconfig */;
+			baseConfigurationReference = 4B9742F5BB262B53395C3022 /* Pods-github-repo-starringTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/github-repo-starring.app/github-repo-starring";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -579,6 +605,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "github-repo-starring/github-repo-starring-Prefix.pch";
 				INFOPLIST_FILE = "github-repo-starringTests/github-repo-starringTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
