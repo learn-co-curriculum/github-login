@@ -19,4 +19,4 @@ Our previous Github Starring  app was hard-coded to be logged in as you. Obvious
 
   1. Handle the case if the token is revoked. Remember, the only way you know fi the token was revoked is if you get a 401 error.
 
-<a href='https://learn.co/lessons/github-login' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/github-login' title='Github Login'>Github Login</a> on Learn.co and start learning to code for free.</p>
