@@ -21,10 +21,7 @@ Once you've set up your constants `.m` file, run the app to make sure that the t
 
 ## Instructions
 
-  1. In your `FISGithubAPIClient.m` file, remove this line: `[serializer setAuthorizationHeaderFieldWithUsername:GITHUB_ACCESS_TOKEN password:@""];` from the following 3 methods: ```+(void)checkIfRepoIsStarredWithFullName:(NSString *)fullName
-                        completionBlock:(void (^)(BOOL))completionBlock ```, ```+(void)starRepoWithFullName:(NSString *)fullName
-            completionBlock:(void (^)(void))completionBlock ```, and ```+(void)unstarRepoWithFullName:(NSString *)fullName
-              completionBlock:(void (^)(void))completionBlock```. If you run the app after doing this and attempt to star a repository, any requests will return a 401 Unauthorized Error. This happens because we just removed the authentication that the personal access token granted us. The goal is to have the user log in using their GitHub username and password in order to authenticate themselves.
+  1. In your `FISGithubAPIClient.m` file, remove this line: `[serializer setAuthorizationHeaderFieldWithUsername:GITHUB_ACCESS_TOKEN password:@""];` from the following 3 methods: ```checkIfRepoIsStarredWithFullName:```, ```starRepoWithFullName:```, and ```unstarRepoWithFullName:```. If you run the app after doing this and attempt to star a repository, any requests will return a 401 Unauthorized Error. This happens because we just removed the authentication that the personal access token granted us. The goal is to have the user log in using their GitHub username and password in order to authenticate themselves.
   2. Create a new view controller called `FISGithubLoginViewController`. This view controller should have one UIButton on it with the title "Login with GitHub".
   3. In the `viewDidLoad` of `FISReposTableViewController`, present `FISGithubLoginViewController` modally.
   4. When a user taps on the "Login with GitHub" button, it should direct them to the appropriate GitHub login page. The URL should look something like this: `https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID&scope=public_repo`. For more information on how this URL was built, see the [GitHub OAuth page](https://developer.github.com/v3/oauth/#web-application-flow).
@@ -36,8 +33,8 @@ Once you've set up your constants `.m` file, run the app to make sure that the t
 
   6. Handle the code that comes back from GitHub in your AppDelegate file in the appropiate method. [This handy category on NSURL](https://gist.github.com/misterfifths/74bc068167bf8f8a2464) will help you out. If the user accepts your request, GitHub redirects back to your app with a temporary code in a code parameter. You will utilize this category on NSURL to retrieve this code. Create a category on NSURL called `QueryStrings` and fill the files out with the code from the GitHub link above. Follow the following screenshots for more information on how to create a category: 
 
-![New File](http://i.imgur.com/EF8rL7w.png)
-![Category](http://i.imgur.com/ZR9Wuxg.png)
+	![New File](http://i.imgur.com/EF8rL7w.png)
+	![Category](http://i.imgur.com/ZR9Wuxg.png)
 
   7. Request the auth token using `AFOAuth2Manager`. Create an instance of `AFOAuth2Manager`. Initialize it with the necessary `baseURL`, `clientID` and `clientSecret`. There's an instance method available to you from the `AFOAuth2Manager` that allows you to authenticate using OAuth with a URL string. This method contains a success block which gets called back with the `AFOAuthCredential` object which you need to store.
   
