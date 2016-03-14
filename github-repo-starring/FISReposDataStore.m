@@ -39,18 +39,18 @@
     }];
 }
 
--(void)toggleStarForRepo:(FISGithubRepository *)repo CompletionBlock:(void (^)(BOOL))completionBlock
+-(void)toggleStarForRepo:(FISGithubRepository *)repo completionBlock:(void (^)(BOOL))completionBlock
 {
-    [FISGithubAPIClient checkIfRepoIsStarredWithFullName:repo.fullName CompletionBlock:^(BOOL starred) {
+    [FISGithubAPIClient checkIfRepoIsStarredWithFullName:repo.fullName completionBlock:^(BOOL starred) {
 
         NSLog(@"ASDF");
         if (starred) {
-            [FISGithubAPIClient unstarRepoWithFullName:repo.fullName CompletionBlock:^{
+            [FISGithubAPIClient unstarRepoWithFullName:repo.fullName completionBlock:^{
                 completionBlock(NO);
             }];
         } else
         {
-            [FISGithubAPIClient starRepoWithFullName:repo.fullName CompletionBlock:^{
+            [FISGithubAPIClient starRepoWithFullName:repo.fullName completionBlock:^{
                 completionBlock(YES);
             }];
         }

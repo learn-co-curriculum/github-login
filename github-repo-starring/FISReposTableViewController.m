@@ -48,7 +48,7 @@
 {
     FISGithubRepository *repo = self.dataStore.repositories[indexPath.row];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.dataStore toggleStarForRepo:repo CompletionBlock:^(BOOL starred) {
+    [self.dataStore toggleStarForRepo:repo completionBlock:^(BOOL starred) {
         if (starred) {
             NSString *message = [NSString stringWithFormat:@"You just starred %@", repo.fullName];
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Repo Starred"  message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

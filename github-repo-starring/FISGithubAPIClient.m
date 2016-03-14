@@ -11,10 +11,10 @@
 #import <AFNetworking.h>
 
 @implementation FISGithubAPIClient
+
 NSString *const GITHUB_API_URL=@"https://api.github.com";
 
-+(void)getRepositoriesWithCompletion:(void (^)(NSArray *))completionBlock
-{
++(void)getRepositoriesWithCompletion:(void (^)(NSArray *))completionBlock {
     NSString *githubURL = [NSString stringWithFormat:@"%@/repositories?client_id=%@&client_secret=%@",GITHUB_API_URL,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET];
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -26,8 +26,8 @@ NSString *const GITHUB_API_URL=@"https://api.github.com";
     }];
 }
 
-+(void)checkIfRepoIsStarredWithFullName:(NSString *)fullName CompletionBlock:(void (^)(BOOL))completionBlock
-{
++(void)checkIfRepoIsStarredWithFullName:(NSString *)fullName
+                        completionBlock:(void (^)(BOOL))completionBlock {
     NSString *url = [NSString stringWithFormat:@"%@/user/starred/%@?client_id=%@&client_secret=%@",GITHUB_API_URL,fullName, GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET];
 
 
@@ -58,8 +58,8 @@ NSString *const GITHUB_API_URL=@"https://api.github.com";
     }];
 }
 
-+(void)starRepoWithFullName:(NSString *)fullName CompletionBlock:(void (^)(void))completionBlock
-{
++(void)starRepoWithFullName:(NSString *)fullName
+            completionBlock:(void (^)(void))completionBlock {
     NSString *url = [NSString stringWithFormat:@"%@/user/starred/%@?client_id=%@&client_secret=%@",GITHUB_API_URL,fullName, GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET];
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
     AFHTTPRequestSerializer *serializer = [[AFHTTPRequestSerializer alloc] init];
@@ -73,8 +73,8 @@ NSString *const GITHUB_API_URL=@"https://api.github.com";
     }];
 }
 
-+(void)unstarRepoWithFullName:(NSString *)fullName CompletionBlock:(void (^)(void))completionBlock
-{
++(void)unstarRepoWithFullName:(NSString *)fullName
+              completionBlock:(void (^)(void))completionBlock {
     NSString *url = [NSString stringWithFormat:@"%@/user/starred/%@?client_id=%@&client_secret=%@",GITHUB_API_URL,fullName, GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET];
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
     AFHTTPRequestSerializer *serializer = [[AFHTTPRequestSerializer alloc] init];
