@@ -39,9 +39,9 @@ Once you've set up your constants `.m` file, run the app to make sure that the t
 ![New File](http://i.imgur.com/EF8rL7w.png)
 ![Category](http://i.imgur.com/ZR9Wuxg.png)
 
-  7. Request the auth token using `AFOAuth2Manager`. Create an instance of `AFOAuth2Manager`. Initialize it with the necessary BaseURL, clientID and clientSecret. There's an instance method available to you from the `AFOAuth2Manager` that allows you to authenticate using OAuth with a URLstring. This method contains a success block with the `AFOAuthCredential` object which you need to store.
+  7. Request the auth token using `AFOAuth2Manager`. Create an instance of `AFOAuth2Manager`. Initialize it with the necessary `baseURL`, `clientID` and `clientSecret`. There's an instance method available to you from the `AFOAuth2Manager` that allows you to authenticate using OAuth with a URL string. This method contains a success block which gets called back with the `AFOAuthCredential` object which you need to store.
   
-  8. Now do all the requests with your new found Auth Token! Just as you stored the credential using a class method on `AFOAuthCredential` by providing the method with the `AFOAuthCredential` object along with an identifier, you can retreive it with a similar method providing it with that same identifier.
+  8. Now do all the requests with your new found Auth Token! Just as you stored the credential using a class method on `AFOAuthCredential` by providing the method with the `AFOAuthCredential` object along with an identifier, you can retreive it with a similar method providing it with that same identifier. Then provide that credential to the request serializer of your `AFHTTPSessionManager` using a category method from AFOAuth2Manager, like this: `[manager.requestSerializer setAuthorizationHeaderFieldWithCredential:credential];`.
 
   
 
