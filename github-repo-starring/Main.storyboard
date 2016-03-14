@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Github Repos-->
+        <!--Github Repos ❤️-->
         <scene sceneID="N4W-4X-Akb">
             <objects>
                 <tableViewController id="i8x-fp-0v4" customClass="FISReposTableViewController" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                             <outlet property="delegate" destination="i8x-fp-0v4" id="cDY-jt-1g8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Github Repos" id="mlG-Vv-Zl9"/>
+                    <navigationItem key="navigationItem" title="Github Repos ❤️" id="mlG-Vv-Zl9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eag-Uf-dUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,6 +51,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a1g-3c-tOb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
