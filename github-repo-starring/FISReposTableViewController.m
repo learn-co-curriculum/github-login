@@ -1,6 +1,6 @@
 //
 //  FISReposTableViewController.m
-//  
+//
 //
 //  Created by Joe Burgess on 5/5/14.
 //
@@ -22,7 +22,9 @@
     [super viewDidLoad];
     self.dataStore = [FISReposDataStore sharedDataStore];
     [self.dataStore getRepositoriesWithCompletion:^(BOOL success) {
-        [self.tableView reloadData];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self.tableView reloadData];
+        }];
     }];
 }
 
@@ -38,7 +40,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
-
+    
     FISGithubRepository *repo = self.dataStore.repositories[indexPath.row];
     cell.textLabel.text = repo.fullName;
     return cell;

@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		56082481EB074ABFA6B17BEE /* libPods-github-repo-starringTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C162AE1AB9ED4995B090E11B /* libPods-github-repo-starringTests.a */; };
-		8F22EA0779774795A9381EE9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9386AE5B2144E1AAB0E871 /* libPods.a */; };
 		D82DB6C01921613300FA0E08 /* not_starred.json in Resources */ = {isa = PBXBuildFile; fileRef = D82DB6BF1921613300FA0E08 /* not_starred.json */; };
 		D82DB6C11921613300FA0E08 /* not_starred.json in Resources */ = {isa = PBXBuildFile; fileRef = D82DB6BF1921613300FA0E08 /* not_starred.json */; };
+		D85C828C54F478A0661F41E7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909651912BA3A2311B622329 /* Pods.framework */; };
 		D871AC9F19210D190029CCC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D871AC9E19210D190029CCC8 /* Foundation.framework */; };
 		D871ACA119210D190029CCC8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D871ACA019210D190029CCC8 /* CoreGraphics.framework */; };
 		D871ACA319210D190029CCC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D871ACA219210D190029CCC8 /* UIKit.framework */; };
@@ -44,11 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D9386AE5B2144E1AAB0E871 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2407562632AA5190454B6473 /* Pods-github-repo-starringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-repo-starringTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-github-repo-starringTests/Pods-github-repo-starringTests.debug.xcconfig"; sourceTree = "<group>"; };
 		318EBDEBC872E044F49EB44E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4B9742F5BB262B53395C3022 /* Pods-github-repo-starringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-repo-starringTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-github-repo-starringTests/Pods-github-repo-starringTests.release.xcconfig"; sourceTree = "<group>"; };
 		81BB06ACDCA4B786B5487A90 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		909651912BA3A2311B622329 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C162AE1AB9ED4995B090E11B /* libPods-github-repo-starringTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-github-repo-starringTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82DB6BF1921613300FA0E08 /* not_starred.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = not_starred.json; sourceTree = "<group>"; };
 		D871AC9B19210D190029CCC8 /* github-repo-starring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-repo-starring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +89,7 @@
 				D871ACA119210D190029CCC8 /* CoreGraphics.framework in Frameworks */,
 				D871ACA319210D190029CCC8 /* UIKit.framework in Frameworks */,
 				D871AC9F19210D190029CCC8 /* Foundation.framework in Frameworks */,
-				8F22EA0779774795A9381EE9 /* libPods.a in Frameworks */,
+				D85C828C54F478A0661F41E7 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +145,8 @@
 				D871ACA019210D190029CCC8 /* CoreGraphics.framework */,
 				D871ACA219210D190029CCC8 /* UIKit.framework */,
 				D871ACBD19210D190029CCC8 /* XCTest.framework */,
-				1D9386AE5B2144E1AAB0E871 /* libPods.a */,
 				C162AE1AB9ED4995B090E11B /* libPods-github-repo-starringTests.a */,
+				909651912BA3A2311B622329 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

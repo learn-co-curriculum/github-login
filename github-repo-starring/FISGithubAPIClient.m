@@ -8,7 +8,7 @@
 
 #import "FISGithubAPIClient.h"
 #import "FISConstants.h"
-#import <AFNetworking.h>
+#import "AFNetworking.h"
 
 @implementation FISGithubAPIClient
 
@@ -18,44 +18,41 @@ NSString *const GITHUB_API_URL=@"https://api.github.com";
     NSString *githubURL = [NSString stringWithFormat:@"%@/repositories?client_id=%@&client_secret=%@",GITHUB_API_URL,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET];
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-
-    [manager GET:githubURL parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        completionBlock(responseObject);
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"Fail: %@",error.localizedDescription);
-    }];
+    
+    [manager GET:githubURL
+      parameters:nil
+        progress:nil
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             completionBlock(responseObject);
+         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             NSLog(@"Fail: %@",error.localizedDescription);
+         }];
 }
 
 +(void)checkIfRepoIsStarredWithFullName:(NSString *)fullName
                         completionBlock:(void (^)(BOOL))completionBlock {
     NSString *url = [NSString stringWithFormat:@"%@/user/starred/%@?client_id=%@&client_secret=%@",GITHUB_API_URL,fullName, GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET];
 
-
-    // New AF Manager
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
-
-    // Need to create a new serializer to set the auth header
     AFHTTPRequestSerializer *serializer = [[AFHTTPRequestSerializer alloc] init];
-
-    // Set the Auth Header
     [serializer setAuthorizationHeaderFieldWithUsername:GITHUB_ACCESS_TOKEN password:@""];
-
-    // Set the header for the next request
     manager.requestSerializer = serializer;
 
-    // Make the Request
-    [manager GET:url parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-        if (response.statusCode == 204 ) {
-            completionBlock(YES);
-        }
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-        NSLog(@"ERROR:%@",error.localizedDescription);
-        if (response.statusCode == 404 ) {
-            completionBlock(NO);
-        }
-    }];
+    [manager GET:url
+      parameters:nil
+        progress:nil
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+             if (response.statusCode == 204) {
+                 completionBlock(YES);
+             }
+         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+             NSLog(@"ERROR:%@",error.localizedDescription);
+             if (response.statusCode == 404 ) {
+                 completionBlock(NO);
+             }
+         }];
 }
 
 +(void)starRepoWithFullName:(NSString *)fullName
@@ -66,7 +63,9 @@ NSString *const GITHUB_API_URL=@"https://api.github.com";
     [serializer setAuthorizationHeaderFieldWithUsername:GITHUB_ACCESS_TOKEN password:@""];
     manager.requestSerializer = serializer;
 
-    [manager PUT:url parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager PUT:url
+      parameters:nil
+         success:^(NSURLSessionDataTask *task, id responseObject) {
         completionBlock();
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"FAIL:%@",error.localizedDescription);
@@ -81,7 +80,9 @@ NSString *const GITHUB_API_URL=@"https://api.github.com";
     [serializer setAuthorizationHeaderFieldWithUsername:GITHUB_ACCESS_TOKEN password:@""];
     manager.requestSerializer = serializer;
 
-    [manager DELETE:url parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager DELETE:url
+         parameters:nil
+            success:^(NSURLSessionDataTask *task, id responseObject) {
         completionBlock();
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"FAIL:%@",error.localizedDescription);

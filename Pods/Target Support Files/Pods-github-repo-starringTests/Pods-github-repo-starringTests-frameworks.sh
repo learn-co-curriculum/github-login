@@ -82,3 +82,12 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-github-repo-starringTests/AFNetworking.framework"
+  install_framework "Pods-github-repo-starringTests/AFOAuth2Manager.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-github-repo-starringTests/AFNetworking.framework"
+  install_framework "Pods-github-repo-starringTests/AFOAuth2Manager.framework"
+fi
