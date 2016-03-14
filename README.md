@@ -8,12 +8,11 @@ Instead of providing a personal access token (which you have manually provided t
 
 ## The Constants File
 
-We've gone ahead and brought in code that fetches the list of public repositories from Github and displays it in a table view. To get that code working, you'll need to fill the `FISConstants.m` file with your client ID, client secret, and personal access token, in a format like this:
+We've gone ahead and brought in code that fetches the list of public repositories from Github and displays it in a table view. To get that code working, you'll need to fill the `FISConstants.m` file with your client ID and client secret, in a format like this:
 
 ```objc
 NSString *const GITHUB_CLIENT_ID = @"your app ID";
 NSString *const GITHUB_CLIENT_SECRET = @"your app secret";
-NSString *const GITHUB_AUTH_TOKEN = @"your personal access token";
 ```
 
 This is how the exising API client builds URLs for talking to the API; check out the API client to see the details. It's good practice to put your constants into one file like this so they can be changed easily and not committed to Git.
