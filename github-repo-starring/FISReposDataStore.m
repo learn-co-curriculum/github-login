@@ -43,7 +43,6 @@
 {
     [FISGithubAPIClient checkIfRepoIsStarredWithFullName:repo.fullName completionBlock:^(BOOL starred) {
 
-        NSLog(@"ASDF");
         if (starred) {
             [FISGithubAPIClient unstarRepoWithFullName:repo.fullName completionBlock:^{
                 completionBlock(NO);
