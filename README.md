@@ -29,18 +29,20 @@ Once you've set up your constants `.m` file, run the app to make sure that the t
   2. Create a new view controller called `FISGithubLoginViewController`. This view controller should have one UIButton on it with the title "Login with GitHub".
   3. In the `viewDidLoad` of `FISReposTableViewController`, present `FISGithubLoginViewController` modally.
   4. When a user taps on the "Login with GitHub" button, it should direct them to the appropriate GitHub login page. The URL should look something like this: `https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID&scope=public_repo`. For more information on how this URL was built, see the [GitHub OAuth page](https://developer.github.com/v3/oauth/#web-application-flow).
-  5. Set up the url scheme in your app to receive the callback. Follow these screenshots to see how to do that: ![On Github](http://i.imgur.com/yvjkOEr.png "On GitHub")
+  5. Set up the url scheme in your app and in xcode to receive the callback. Follow these screenshots to see how to do that: ![On Github](http://i.imgur.com/yvjkOEr.png "On GitHub")
   
-  ^This is on the settings page of the OAuth application that you set up.
+  ^APP - This is on the settings page of the OAuth application that you set up.
   
-  ![In XCode](http://i.imgur.com/X6UcyOr.png "In XCode") - How to get here: Click your project file at the top of your project navigator. Then click on the name of your project under the "Targets" section in the left pane. With your project selected, choose the "Info" tab on the top of the screen. Scrool down to the "URL Types" section of this window.
+  ![In XCode](http://i.imgur.com/X6UcyOr.png "In XCode") ^XCODE - How to get here: Click your project file at the top of your project navigator. Then click on the name of your project under the "Targets" section in the left pane. With your project selected, choose the "Info" tab on the top of the screen. Scrool down to the "URL Types" section of this window.
 
-  6. Handle the code that comes back from GitHub. [This handy category on NSURL](https://gist.github.com/misterfifths/74bc068167bf8f8a2464) will help you out. Create a category on NSURL called `QueryStrings` and fill the files out with the code from the GitHub link above. Follow the following screenshots for more information on how to create a category: 
+  6. Handle the code that comes back from GitHub in your AppDelegate file in the appropiate method. [This handy category on NSURL](https://gist.github.com/misterfifths/74bc068167bf8f8a2464) will help you out. If the user accepts your request, GitHub redirects back to your app with a temporary code in a code parameter. You will utilize this category on NSURL to retrieve this code. Create a category on NSURL called `QueryStrings` and fill the files out with the code from the GitHub link above. Follow the following screenshots for more information on how to create a category: 
 
 ![New File](http://i.imgur.com/EF8rL7w.png)
 ![Category](http://i.imgur.com/ZR9Wuxg.png)
-  7. Request the auth token.
-  8. Now do all the requests with your new found Auth Token!
+
+  7. Request the auth token using `AFOAuth2Manager`. Create an instance of `AFOAuth2Manager`. Initialize it with the necessary BaseURL, clientID and clientSecret. There's an instance method available to you from the `AFOAuth2Manager` that allows you to authenticate using OAuth with a URLstring. This method contains a success block with the `AFOAuthCredential` object which you need to store.
+  
+  8. Now do all the requests with your new found Auth Token! Just as you stored the credential using a class method on `AFOAuthCredential` by providing the method with the `AFOAuthCredential` object along with an identifier, you can retreive it with a similar method providing it with that same identifier.
 
   
 
