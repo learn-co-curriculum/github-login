@@ -23,7 +23,8 @@ Once you've set up your constants `.m` file, run the app to make sure that the t
 
   1. In your `FISGithubAPIClient.m` file, remove this line: `[serializer setAuthorizationHeaderFieldWithUsername:GITHUB_ACCESS_TOKEN password:@""];` from the following 3 methods: ```checkIfRepoIsStarredWithFullName:```, ```starRepoWithFullName:```, and ```unstarRepoWithFullName:```. If you run the app after doing this and attempt to star a repository, any requests will return a 401 Unauthorized Error. This happens because we just removed the authentication that the personal access token granted us. The goal is to have the user log in using their GitHub username and password in order to authenticate themselves.
   2. Create a new view controller called `FISGithubLoginViewController`. This view controller should have one UIButton on it with the title "Login with GitHub".
-  3. In the `viewDidLoad` of `FISReposTableViewController`, present `FISGithubLoginViewController` modally.
+  3. In the `viewDidAppear` of `FISReposTableViewController`, present `FISGithubLoginViewController` modally.
+     - We use `viewDidAppear` instead of `viewDidLoad` because we have to wait til the ReposTableVC is *on screen* before we can present a new VC 
   4. When a user taps on the "Login with GitHub" button, it should direct them to the appropriate GitHub login page. The URL should look something like this: `https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID&scope=public_repo`. For more information on how this URL was built, see the [GitHub OAuth page](https://developer.github.com/v3/oauth/#web-application-flow).
   5. Set up the url scheme in your app and in xcode to receive the callback. Follow these screenshots to see how to do that: ![On Github](http://i.imgur.com/yvjkOEr.png "On GitHub")
   
